@@ -4,10 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-    <form action="calculadora">
 
-    </form>
+        <header>
+            <h1>Calculadora Diversa</h1>
+            <nav>
+                <ul>
+                    <li><a href="#saude" class="barras-menu">Saúde</a></li>
+                    <li><a href="#financeiro" class="barras-menu">Finanças</a></li>
+                    <li class="menu"><a href="#" class="barras-menu">Ainda nao </a>
+                    <div class="dropdown">
+                        <a href="#diversos">diversos</a>
+                        <a href="#diversos">diverasasassos</a>
+                        <a href="#diversos">diversos</a>
+                        <a href="#diversos">diversos</a>
+                        <a href="#diversos">diversos0</a>
+                    </div>
+                    </li>
+                    <li><a href="#referencias" class="barras-menu">Minhas referências</a></li>
+                    <li><a href="#redes" class="barras-menu">Siga-me nas redes</a></li>
+                </ul>
+            </nav>
+        </header>
+<body>
+    <div class="container">
+            <div class="galeria">
+                <div class="peso">
+                    <h2>IMC</h2>
+                    <label for="">Peso:</label><br>
+                    <input type="number" id="peso" placeholder="exemplo: 67.5"><br>
+                    <label for="altura">Altura:</label><br>
+                    <input type="number" id="altura" placeholder="exemplo: 1.75">
+                    <p id="resultadoIMC"></p><br>
+                    <button onclick="calcularIMC()">Calcular IMC</button>
+                </div>
+            </div>
+            <div class="galeria">
+                <div class="desconto">
+                    <h2>Desconto</h2>
+                    <p>Valor do desconto</p>
+                    <input type="number" id="desconto" placeholder="Digite aqui">
+                    <p>Valor do produto</p>
+                    <input type="number" id="valor" placeholder="Digite aqui">
+                    <p id="resultadoDesconto"></p>
+                    <p id="resultadoTotal"></p>
+                    <button onclick="calcularDesconto()">Calcular Desconto</button>
+                 </div>
+                </div>
+                
+            <div class="galeria">
+                <div class="media-escolar">
+                    <h2>Média Escolar</h2>
+                    <select name="materias" id="materias">
+                        <option value="port" id="portugues">Português</option>
+                        <option value="mat" id="matematica">Matematica</option>
+                        <option value="cie">Ciências</option>
+                        <option value="geo">Geografia</option>
+                        <option value="hist">História</option>
+                    </select>
+                    <p>Nota1</p>
+                    <input type="number" id="n1" placeholder="Digite aqui">
+                    <p>Nota1</p>
+                    <input type="number" id="n2" placeholder="Digite aqui">
+                    <p>Nota1</p>
+                    <input type="number" id="n3" placeholder="Digite aqui">
+                    <p>Nota1</p>
+                    <input type="number" id="n4" placeholder="Digite aqui">
+                    <p id="resultadoMedia"></p>
+                    <button onclick="calcularMedia()">Calcular Média</button>
+                </div>
+            </div>
+    </div>
+
+    <div class="referencias">
+        <div class="galeria-referencias">
+            <img src="rafa.jpg" alt="">
+            <div class="sinopse">
+                <h4>Rafa Ballerini</h4>
+                <p>Engenheira de software e criadora de conteúdo focada em programação e carreira tech. Com um canal no YouTube repleto de tutoriais e dicas, Rafaella incentiva mulheres e iniciantes a entrarem na área de tecnologia, tornando o aprendizado mais acessível e motivador</p>
+                <a href="https://www.youtube.com/RafaellaBallerini" class="youtube" target="_blank">Acesse aqui o canal<br>
+                <i class="bi bi-youtube"></i></a
+                >
+            </div>
+        </div>
+
+        <div class="galeria-referencias">
+            <img src="guanabara.jpg" alt="">
+            <div class="sinopse">
+                <h4>Gustavo Guanabara</h4>
+                            <p>Professor e criador do Curso em Vídeo, um dos maiores canais de programação do Brasil. Reconhecido por seu jeito didático e descontraído de ensinar, ele já ajudou milhares de pessoas a entrarem no mundo da tecnologia com cursos gratuitos e acessíveis.</p>
+                            <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" class="youtube" target="_blank">Acesse aqui o canal<br><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+        <div class="galeria-referencias">
+            <img src="bruno.jpg" alt="">
+            <div class="sinopse">
+                <h4>Bruno Rodrigues</h4>
+                <p>Desenvolvedor web especializado em criação de sites institucionais e landing pages, especialmente para psicólogos. Formado em Análise e Desenvolvimento de Sistemas, já liderou equipes de desenvolvimento e compartilha conhecimento no canal Inteliogia Dev's Insights, ajudando a comunidade dev a crescer.</p>
+                <a href="https://www.youtube.com/@InteliogiaDev"  class="youtube" target="_blank">Acesse aqui o canal<br>
+                    <i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+
+        
+
+        <!-- ↓ Fim da div referencias -->
+    </div>
+
+    <footer>
+        <div class="redes">
+            <ul>
+                <a href="#">
+                    <li class="instagram">
+                        <span class="icon"><i class="bi-instagram"></i></span>
+                        <span class="text">Instagram</span>
+                    </li>
+                </a> 
+            </ul>
+
+            <ul>
+                <a href="#">
+                    <li class="linkedin">
+                        <span class="icon"><i class="bi-linkedin"></i></span>
+                        <span class="text">Linkedin</span>
+                    </li>
+                </a> 
+            </ul>
+
+            <ul>
+                <a href="#">
+                    <li class="github">
+                        <span class="icon"><i class="bi-github"></i></span>
+                        <span class="text">Github</span>
+                    </li>
+                </a> 
+            </ul>
+
+
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
